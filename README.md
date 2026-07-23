@@ -10,8 +10,8 @@
 
 [![Linux Swift](https://github.com/kushal211/AppleWeatherKit/actions/workflows/swift-ubuntu.yml/badge.svg)](https://github.com/kushal211/AppleWeatherKit/actions?query=workflow%3Aswift-ubuntu)
 [![macOS](https://github.com/kushal211/AppleWeatherKit/actions/workflows/swift-macos.yml/badge.svg)](https://github.com/kushal211/AppleWeatherKit/actions?query=workflow%3Aswift-macos)
-[![Swift Versions](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fkushalpanchal%2Fapple-weather-kit%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/kushalpanchal/apple-weather-kit)
-[![Platforms](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fkushalpanchal%2Fapple-weather-kit%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/kushalpanchal/apple-weather-kit)
+[![Swift Versions](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fkushalpanchal%2Fapple-weather-kit%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/kushal211/apple-weather-kit)
+[![Platforms](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fkushalpanchal%2Fapple-weather-kit%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/kushal211/apple-weather-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 </div>
