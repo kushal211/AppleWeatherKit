@@ -8,8 +8,8 @@
 
 <br/>
 
-[![Linux Swift](https://github.com/kushal211/AppleWeatherKit/actions/workflows/swift-ubuntu.yml/badge.svg)](https://github.com/kushal211/AppleWeatherKit/actions?query=workflow%3Aswift-ubuntu)
-[![macOS](https://github.com/kushal211/AppleWeatherKit/actions/workflows/swift-macos.yml/badge.svg)](https://github.com/kushal211/AppleWeatherKit/actions?query=workflow%3Aswift-macos)
+[![Swift Ubuntu](https://github.com/kushal211/AppleWeatherKit/actions/workflows/swift-ubuntu.yml/badge.svg)](https://github.com/kushal211/AppleWeatherKit/actions/workflows/swift-ubuntu.yml)
+[![Swift macOS](https://github.com/kushal211/AppleWeatherKit/actions/workflows/swift-macos.yml/badge.svg)](https://github.com/kushal211/AppleWeatherKit/actions/workflows/swift-macos.yml)
 [![Swift 5.9+](https://img.shields.io/badge/Swift-5.9%2B-orange.svg)](https://swift.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
