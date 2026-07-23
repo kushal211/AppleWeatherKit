@@ -8,8 +8,8 @@
 
 <br/>
 
-[![Linux Swift](https://github.com/kushalpanchal/AppleWeatherKit/actions/workflows/swift-ubuntu.yml/badge.svg)](https://github.com/kushalpanchal/AppleWeatherKit/actions?query=workflow%3Aswift-ubuntu)
-[![macOS](https://github.com/kushalpanchal/AppleWeatherKit/actions/workflows/swift-macos.yml/badge.svg)](https://github.com/kushalpanchal/AppleWeatherKit/actions?query=workflow%3Aswift-macos)
+[![Linux Swift](https://github.com/kushal211/AppleWeatherKit/actions/workflows/swift-ubuntu.yml/badge.svg)](https://github.com/kushal211/AppleWeatherKit/actions?query=workflow%3Aswift-ubuntu)
+[![macOS](https://github.com/kushal211/AppleWeatherKit/actions/workflows/swift-macos.yml/badge.svg)](https://github.com/kushal211/AppleWeatherKit/actions?query=workflow%3Aswift-macos)
 [![Swift Versions](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fkushalpanchal%2Fapple-weather-kit%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/kushalpanchal/apple-weather-kit)
 [![Platforms](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fkushalpanchal%2Fapple-weather-kit%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/kushalpanchal/apple-weather-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -73,7 +73,7 @@ and is required to build the JSON Web Token (JWT) that authenticates every Weath
 1. In Xcode, open your project and choose **File ▸ Add Package Dependencies…**
 2. In the search field, paste the package URL:
    ```
-   https://github.com/kushalpanchal/AppleWeatherKit.git
+   https://github.com/kushal211/AppleWeatherKit.git
    ```
 3. Choose the **Dependency Rule** (e.g. *Up to Next Major Version*) and click **Add Package**.
 4. Select the **AppleWeatherKit** library product and add it to your app target.
@@ -90,7 +90,7 @@ import PackageDescription
 let package = Package(
     name: "YourApp",
     dependencies: [
-        .package(url: "https://github.com/kushalpanchal/AppleWeatherKit.git", from: "1.0.0"),
+        .package(url: "https://github.com/kushal211/AppleWeatherKit.git", from: "1.0.0"),
     ],
     targets: [
         .target(
