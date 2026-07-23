@@ -1,0 +1,61 @@
+//
+//  WeatherSeverity.swift
+//  
+//
+//  Created by Kushal Panchal on 7/23/26.
+//
+
+import Foundation
+
+/// A description of the severity of the severe weather event.
+@available(macOS 11, iOS 13, watchOS 6, tvOS 13, visionOS 1, *)
+public enum WeatherSeverity : String, Codable, CaseIterable, CustomStringConvertible, Hashable, Sendable {
+
+    /// Specifies "minimal" or no threat to life or property.
+    case minor
+
+    /// Specifies "possible" threat to life or property.
+    case moderate
+
+    /// Specifies "significant" threat to life or property.
+    case severe
+
+    /// Specifies "extraordinary" threat to life or property.
+    case extreme
+
+    /// Specifies unknown severity.
+    case unknown
+
+    /// Localized string describing the weather severity.
+    public var description: String {
+        switch self {
+        case .minor:
+            return NSLocalizedString("WeatherSeverity.minor", bundle: Bundle.module, comment: "Minor")
+        case .moderate:
+            return NSLocalizedString("WeatherSeverity.moderate", bundle: Bundle.module, comment: "Moderate")
+        case .severe:
+            return NSLocalizedString("WeatherSeverity.severe", bundle: Bundle.module, comment: "Severe")
+        case .extreme:
+            return NSLocalizedString("WeatherSeverity.extreme", bundle: Bundle.module, comment: "Extreme")
+        case .unknown:
+            return NSLocalizedString("WeatherSeverity.unknown", bundle: Bundle.module, comment: "Unknown")
+        }
+    }
+
+    /// A localized accessibility description describing the weather severity, suitable for
+    /// Voice Over and other assistive technologies.
+    public var accessibilityDescription: String {
+        switch self {
+        case .minor:
+            return NSLocalizedString("WeatherSeverity.accessibility.minor", bundle: Bundle.module, comment: "Minor")
+        case .moderate:
+            return NSLocalizedString("WeatherSeverity.accessibility.moderate", bundle: Bundle.module, comment: "Moderate")
+        case .severe:
+            return NSLocalizedString("WeatherSeverity.accessibility.severe", bundle: Bundle.module, comment: "Severe")
+        case .extreme:
+            return NSLocalizedString("WeatherSeverity.accessibility.extreme", bundle: Bundle.module, comment: "Extreme")
+        case .unknown:
+            return NSLocalizedString("WeatherSeverity.accessibility.unknown", bundle: Bundle.module, comment: "Unknown")
+        }
+    }
+}

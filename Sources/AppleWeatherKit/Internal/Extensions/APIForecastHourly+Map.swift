@@ -1,0 +1,52 @@
+//
+//  APIForecastHourly+Map.swift
+//
+//
+//  Created by Kushal Panchal on 7/23/26.
+//
+
+import Foundation
+
+extension APIForecastHourly {
+    var hourForecast: Forecast<HourWeather> {
+        Forecast<HourWeather>(
+            forecast: hours.map(\.hourWeather),
+            metadata: metadata.weatherMetadata
+        )
+    }
+}
+
+extension APIHour {
+    var hourWeather: HourWeather {
+        HourWeather(
+            date: forecastStart,
+            cloudCover: cloudCover.percentage,
+            cloudCoverByAltitude: CloudCoverByAltitude(
+                low: cloudCoverLowAltPct.percentage,
+                medium: cloudCoverMidAltPct.percentage,
+                high: cloudCoverHighAltPct.percentage
+            ),
+            condition: WeatherCondition(rawValue: conditionCode) ?? .undefined,
+            symbolName: (WeatherCondition(rawValue: conditionCode) ?? .undefined).sfSymbol,
+            dewPoint: Measurement(value: temperatureDewPoint, unit: .celsius),
+            humidity: humidity.percentage,
+            isDaylight: daylight,
+            precipitation: Precipitation(rawValue: precipitationType) ?? .none,
+            precipitationChance: precipitationChance.percentage,
+            precipitationAmount: Measurement(value: precipitationAmount, unit: .millimeters),
+            precipitationIntensity: Measurement(value: perceivedPrecipitationIntensity, unit: .millimetersPerHour),
+            pressure: Measurement(value: pressure, unit: .millibars),
+            pressureTrend: PressureTrend(rawValue: pressureTrend) ?? .undefined,
+            snowfallIntensity: Measurement(value: snowfallIntensity ?? 0.0, unit: .millimetersPerHour),
+            snowfallAmount: Measurement(value: snowfallAmount ?? 0.0, unit: .millimeters),
+            temperature: Measurement(value: temperature, unit: .celsius),
+            apparentTemperature: Measurement(value: temperatureApparent, unit: .celsius),
+            uvIndex: UVIndex(value: uvIndex, category: .init(value: uvIndex)),
+            visibility: Measurement(value: visibility, unit: .meters),
+            wind: Wind(
+                compassDirection: Wind.CompassDirection(value: windDirection),
+                direction: Measurement(value: Double(windDirection), unit: .degrees),
+                speed: Measurement(value: windSpeed, unit: .kilometersPerHour))
+        )
+    }
+}

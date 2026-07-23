@@ -1,0 +1,67 @@
+//
+//  WeatherProxy.swift
+//  
+//
+//  Created by Kushal Panchal on 7/23/26.
+//
+
+import Foundation
+
+@usableFromInline
+struct WeatherProxy: Sendable {
+    init(
+        availability: WeatherAvailability?,
+        currentWeather: CurrentWeather?,
+        dailyForecast: Forecast<DayWeather>?,
+        hourlyForecast: Forecast<HourWeather>?,
+        minuteForecast: Forecast<MinuteWeather>?,
+        weatherAlerts: [WeatherAlert]?,
+        weatherChanges: WeatherChanges? = nil,
+        historicalComparisons: HistoricalComparisons? = nil
+    ) {
+        self.availability = availability
+        self.currentWeather = currentWeather
+        self.dailyForecast = dailyForecast
+        self.hourlyForecast = hourlyForecast
+        self.minuteForecast = minuteForecast
+        self.weatherAlerts = weatherAlerts
+        self.weatherChanges = weatherChanges
+        self.historicalComparisons = historicalComparisons
+    }
+
+    var availability: WeatherAvailability?
+    var currentWeather: CurrentWeather?
+    var dailyForecast: Forecast<DayWeather>?
+    var hourlyForecast: Forecast<HourWeather>?
+    var minuteForecast: Forecast<MinuteWeather>?
+    var weatherAlerts: [WeatherAlert]?
+
+    var weatherChanges: WeatherChanges?
+    var historicalComparisons: HistoricalComparisons?
+
+    func combined(with weatherProxy: WeatherProxy) -> WeatherProxy {
+        WeatherProxy(
+            availability: availability ?? weatherProxy.availability,
+            currentWeather: currentWeather ?? weatherProxy.currentWeather,
+            dailyForecast: dailyForecast ?? weatherProxy.dailyForecast,
+            hourlyForecast: hourlyForecast ?? weatherProxy.hourlyForecast,
+            minuteForecast: minuteForecast ?? weatherProxy.minuteForecast,
+            weatherAlerts: weatherAlerts ?? weatherProxy.weatherAlerts,
+            weatherChanges: weatherChanges ?? weatherProxy.weatherChanges,
+            historicalComparisons: historicalComparisons ?? weatherProxy.historicalComparisons
+        )
+    }
+}
+
+extension WeatherProxy {
+    static let empty: Self = WeatherProxy(
+        availability: nil,
+        currentWeather: nil,
+        dailyForecast: nil,
+        hourlyForecast: nil,
+        minuteForecast: nil,
+        weatherAlerts: nil,
+        weatherChanges: nil,
+        historicalComparisons: nil
+    )
+}

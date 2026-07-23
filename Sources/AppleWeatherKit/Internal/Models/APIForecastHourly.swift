@@ -1,0 +1,76 @@
+//
+//  APIForecastHourly.swift
+//  
+//
+//  Created by Kushal Panchal on 7/23/26.
+//
+
+import Foundation
+
+// MARK: - APIForecastHourly
+struct APIForecastHourly: Codable, Equatable {
+    let metadata: APIMetadata
+    let hours: [APIHour]
+
+    enum CodingKeys: String, CodingKey {
+        case metadata = "metadata"
+        case hours = "hours"
+    }
+}
+
+// MARK: - APIHour
+struct APIHour: Codable, Equatable {
+    @TextCaseCoding<Lowercased> var conditionCode: String
+    @TextCaseCoding<Lowercased> var precipitationType: String
+    @TextCaseCoding<Lowercased> var pressureTrend: String
+    let cloudCover: Int
+    let cloudCoverHighAltPct: Int
+    let cloudCoverLowAltPct: Int
+    let cloudCoverMidAltPct: Int
+    let daylight: Bool
+    let forecastStart: Date
+    let humidity: Int
+    let perceivedPrecipitationIntensity: Double
+    let precipitationAmount: Double
+    let precipitationChance: Int
+    let precipitationIntensity: Double
+    let pressure: Double
+    let snowfallAmount: Double?
+    let snowfallIntensity: Double?
+    let temperature: Double
+    let temperatureApparent: Double
+    let temperatureDewPoint: Double
+    let uvIndex: Int
+    let visibility: Double
+    let windDirection: Double
+    let windGust: Double
+    let windSpeed: Double
+
+    enum CodingKeys: String, CodingKey {
+        case forecastStart = "forecastStart"
+        case cloudCover = "cloudCover"
+        case cloudCoverHighAltPct = "cloudCoverHighAltPct"
+        case cloudCoverLowAltPct = "cloudCoverLowAltPct"
+        case cloudCoverMidAltPct = "cloudCoverMidAltPct"
+        case conditionCode = "conditionCode"
+        case daylight = "daylight"
+        case humidity = "humidity"
+        case perceivedPrecipitationIntensity = "perceivedPrecipitationIntensity"
+        case precipitationAmount = "precipitationAmount"
+        case precipitationIntensity = "precipitationIntensity"
+        case precipitationChance = "precipitationChance"
+        case precipitationType = "precipitationType"
+        case pressure = "pressure"
+        case pressureTrend = "pressureTrend"
+        case snowfallIntensity = "snowfallIntensity"
+        case snowfallAmount = "snowfallAmount"
+        case temperature = "temperature"
+        case temperatureApparent = "temperatureApparent"
+        case temperatureDewPoint = "temperatureDewPoint"
+        case uvIndex = "uvIndex"
+        case visibility = "visibility"
+        case windDirection = "windDirection"
+        case windGust = "windGust"
+        case windSpeed = "windSpeed"
+    }
+}
